@@ -10,4 +10,4 @@
 ### 6. Углубился в систему Git и BACH
 
 ## Ссылка на проект "Посмотри в окно"
-[Проект posmotri_v_okno] https://github.com/mudrec21veka/posmotri_v_okno.git
+[Проект posmotri_v_okno] https://github.com/mudrec21veka/posmotri_v_okno
