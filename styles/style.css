@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -126,7 +128,7 @@ ol {
 }
 
 .search-form__textfield {
-  width: 225px;
+  min-width: 225px;
   height: 27px;
   border: 0;
   border-top: 1px solid #fff;
@@ -174,10 +176,11 @@ ol {
   height: 103px;
   padding: 2px;
   object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
@@ -209,8 +212,14 @@ ol {
 }
 
 label span {
-  display: inline-block;
+  display: flex;
   vertical-align: middle;
+}
+
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 input[type="checkbox"] + span {
@@ -220,6 +229,25 @@ input[type="checkbox"] + span {
   text-align: center;
   background-color: #1b1919;
   cursor: pointer;
+}
+input[type="checkbox"] + span::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 1px;
+  opacity: 0;
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked + span::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 1px;
+  opacity: 1;
+  background-color: #fff;
 }
 
 input[type="checkbox"] + span:hover + span,
@@ -237,15 +265,6 @@ input[type="text"] + span:hover {
 .content__list-item:active,
 .button:active {
   background-color: #545050;
-}
-
-input[type="checkbox"] + span:active:after {
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 1px;
-  background-color: #fff;
 }
 
 input[type="text"]:active {
